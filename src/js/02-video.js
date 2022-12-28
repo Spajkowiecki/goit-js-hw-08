@@ -10,6 +10,10 @@ player.on(
   }, 1000)
 );
 
-window.onload = function () {
-  player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
-};
+let currentTime = 0;
+
+if (localStorage.getItem('videoplayer-current-time') != null) {
+  currentTime = localStorage.getItem('videoplayer-current-time');
+}
+
+player.setCurrentTime(currentTime);

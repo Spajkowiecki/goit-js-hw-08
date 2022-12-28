@@ -25,6 +25,7 @@ if (localStorage.getItem('feedback-form-state') === null) {
 } else {
   emailInput.value = getData.email;
   if (getData.textInput === '') textInput.value = '';
+  textInput.value = getData.value;
 }
 
 form.addEventListener('submit', e => {
